@@ -1,0 +1,81 @@
+{% extends "base_nav.html" %}
+{% block content %}
+
+        <!-- Page Content -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Dashboard</h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+
+{#        <div class="row">#}
+{#            <div class="col-sm-6 col-md-4">#}
+{#                <div class="thumbnail">#}
+{#                    <img src="../static/img/celebrate-recovery-242x200.jpg" alt="sample image" style="padding: 0;">#}
+{#                    <div class="caption">#}
+{#                        <h3>Thumbnail label</h3>#}
+{#                        <p class="wrapper">this is where the image of 242x200 and caption is foing to be placed </p>#}
+{#                        <p><a href="#" class="btn btn-primary" role="button">Button</a>#}
+{#                            <a href="#" class="btn btn-default" role="button">Button</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-sm-6 col-md-4">#}
+{#                <p>image and caption</p>#}
+{#            </div>#}
+{#            <div class="col-sm-6 col-md-4">#}
+{#                <div class="thumbnail">#}
+{#                    <img src="../static/img/darkgrey.png" alt="sample image">#}
+{#                    <div class="caption">#}
+{#                        <h3>Thumbnail label</h3>#}
+{#                        <p class="wrapper">this is where the image of 242x200 and caption is foing to be placed </p>#}
+{#                        <p><a href="#" class="btn btn-primary" role="button">Button</a>#}
+{#                            <a href="#" class="btn btn-default" role="button">Button</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+
+
+{#    <div>#}
+{#        <div class="col-md-3">#}
+{#            <h3>first column of options</h3>#}
+{#            <p>number of students{{ studcount }}</p>#}
+{#        </div>#}
+{#        <div class="col-md-3">#}
+{#            <h3>secont column of thindgs</h3>#}
+{#        </div>#}
+{#        <div class="col-md-3">#}
+{#            <h3> blaa blaa blaa</h3>#}
+{#        </div>#}
+{#        <div class="col-md-3">#}
+{#            <h3> bla bla bl a again</h3>#}
+{#        </div>#}
+{#    </div>#}
+    <hr/>
+
+    <div class="table-responsive">
+    <table class="table" style="width:100%">
+            <tr class="">
+                <th>Title</th>
+                <th>Post</th>
+                <th>Author</th>
+            </tr>
+        {% for post in posts %}
+        <tr>
+            <td>{{ post.title }}</td>
+            <td>{{ post.description }}</td>
+            <td>{{ post.author }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+
+        <!-- /#page-content-wrapper -->
+{% endblock %}

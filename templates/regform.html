@@ -1,0 +1,107 @@
+{% extends "base_nav.html" %}
+{% block content %}
+{#        self.firstname = firstname#}
+{#        self.second_name = second_name#}
+{#        self.surname = surname#}
+{#        self.gender = gender#}
+{#        self.email = email#}
+{#        self.address1 = address1#}
+{#        self.address2 = address2#}
+{#        self.telephone = telephone#}
+{#        self.cell_number = cell_number#}
+{#        self.dob = dob#}
+{#        self.identification_number = identification_number#}
+{#        self.passport_number = passport_number#}
+{#        self.marital_status = marital_status#}
+{#        self.full_spouse_name = full_spouse_name#}
+{#        self.rank = rank#}
+
+  <form class="form" role="form" action = "{{ url_for('addrecord') }}" method = "post">
+         <h3>Student Information</h3>
+          <hr/>
+    <fieldset>
+{#          <legend>Personal information</legend>#}
+          <div class="row">
+            <div class="col-md-5 columns">
+              <label  for="firstname">Firstname</label>
+              <input class="form-control" rows="2" type = "text" name = "firstname" placeholder="Firstname"/></br>
+            </div>
+            <div class="col-md-2">
+              <label  for="second_name">Initials</label>
+              <input class="form-control" type = "text" name = "second_name" placeholder="Initials"/></br>
+            </div>
+            <div class="col-md-5">
+              <label  for="surname">Surname</label>
+              <input class="form-control" type = "text" name = "surname" placeholder="Surname"/></br>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 columns" >
+              <div class="input-group">
+                 <span class="input-group-addon" id="basic-addon1">Gender</span>
+                 <input class="form-control" type = "text" name = "gender" /></br>
+              </div>
+            </div>
+            <div class="col-md-6 columns">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Email</span>
+                    <input class="form-control" type = "text" name = "email"  aria-describedby="basic-addon1"/></br>
+                </div>
+            </div>
+          </div>
+          <label  for="address1">Address</label>
+          <input class="form-control" type = "text" name = "address1" placeholder="Address"/>
+
+          <input class="form-control" type = "text" name = "address2" placeholder="Address"/></br>
+          <div class="row">
+            <div class="col-md-4">
+              <label  for="telephone">Telephone</label>
+              <input class="form-control" type = "text" name = "telephone" placeholder="Home Telephone"/></br>
+            </div>
+            <div class="col-md-4">
+              <label  for="cell_number">Cell Number</label>
+              <input class="form-control" type = "text" name = "cell_number" placeholder="Cell Number"/></br>
+            </div>
+            <div class="col-md-4">
+              <label  for="dob">DOB</label>
+              <input class="form-control" type = "text" id="dob" name = "dob" placeholder="yyyy/mm/dd "/></br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <label  for="identification_number">ID Number</label>
+              <input class="form-control" type = "text" name = "identification_number" placeholder="ID Number"/></br>
+            </div>
+            <div class="col-md-4">
+              <label  for="passport_number">Passport Number</label>
+              <input class="form-control" type = "text" name = "passport_number" placeholder="Passport Number"/></br>
+            </div>
+            <div class="col-md-4">
+              <label  for="marital_status">Marital Status</label>
+              <input class="form-control" type = "text" name = "marital_status" placeholder="Marital Status"/></br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <label  for="full_spouse_name">Spouse Name</label>
+              <input class="form-control" type = "text" name = "full_spouse_name" placeholder="Full Name Of Spouse"/></br>
+            </div>
+            <div class="col-md-4">
+              <label  for="tracking">Tracking No.</label>
+              <input class="form-control" type = "text" name = "tracking" placeholder="{{ tracking }}"/><br/>
+            </div>
+            <div class="col-md-4">
+              <label  for="rank">Ranking</label>
+              <input class="form-control" type = "text" name = "rank" placeholder="Rank"/></br>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                <input class="btn " type = "submit" value = "Submit" /><br>
+              </div>
+          </div>
+  </fieldset>
+      </form>
+
+{% endblock %}

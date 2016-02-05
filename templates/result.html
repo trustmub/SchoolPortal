@@ -1,0 +1,41 @@
+{% extends "base_nav.html" %}
+{% block content %}
+{#        self.firstname = firstname#}
+{#        self.second_name = second_name#}
+{#        self.surname = surname#}
+{#        self.gender = gender#}
+{#        self.email = email#}
+{#        self.address1 = address1#}
+{#        self.address2 = address2#}
+{#        self.telephone = telephone#}
+{#        self.cell_number = cell_number#}
+{#        self.dob = dob#}
+{#        self.identification_number = identification_number#}
+{#        self.passport_number = passport_number#}
+{#        self.marital_status = marital_status#}
+{#        self.full_spouse_name = full_spouse_name#}
+{#        self.rank = rank#}
+<div class="table-responsive">
+    <table class="table" style="width:100%">
+            <tr class="">
+                <th>First Name</th>
+                <th>Surname</th>
+                <th>D.O.B</th>
+                <th>Gender</th>
+                <th>email</th>
+                <th>cell number</th>
+
+            </tr>
+        {% for post in student %}
+        <tr>
+            <td>{{ post.firstname }}</td>
+            <td>{{ post.surname }}</td>
+            <td>{{ post.dob }}</td>
+        <td>{{ post.gender }}</td>
+        <td>{{ post.email }}</td>
+        <td>{{ post.cell_number }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}
